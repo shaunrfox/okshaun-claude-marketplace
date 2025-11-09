@@ -412,9 +412,29 @@ After setup is complete:
 
 For complex architectural decisions or refactoring, launch the **panda-architect** agent.
 
-## Reference Files from Best Practices Repo
+## Working Examples
 
-- Config example: `panda.config.ts`
-- Preset example: `cetec-preset.ts`
-- Token organization: `src/styles/tokens.ts`, `src/styles/semanticTokens.ts`
-- Build integration: `vite.config.ts`, `package.json`
+Reference these files in the `examples/` directory for production-tested patterns:
+
+**Configuration:**
+- `examples/panda.config.ts` - Complete Panda config with preset integration
+- `examples/preset.ts` - Full preset architecture (reynardPreset) with tokens, semantic tokens, conditions, patterns
+
+**Token Architecture:**
+- `examples/primitives/` - Base token files organized by category
+  - `primitives.color.tokens.ts` - Color scales (10-100) with hex values
+  - `primitives.size.tokens.ts` - Unified sizing/spacing scale
+  - `primitives.typography.tokens.ts` - Font families, sizes, weights, line heights
+  - `primitives.animation.tokens.ts` - Durations, easings, keyframes
+  - `primitives.utility.tokens.ts` - Borders, radii, opacity, aspect ratios
+- `examples/semantics/` - Semantic token layer referencing primitives
+  - `semantics.color.tokens.ts` - Theme-aware color semantics
+  - `semantics.elevation.tokens.ts` - Shadow and elevation tokens
+  - `semantics.opacity.tokens.ts` - Opacity semantic values
+  - `semantics.utility.tokens.ts` - Semantic utilities
+
+**Additional Patterns:**
+- `examples/textStyles.ts` - Typography preset definitions
+- `examples/conditions.ts` - Custom conditions and pseudo-classes
+- `examples/utils/splitProps.ts` - CSS/HTML prop separation utility
+- `examples/utils/ThemeContext.tsx` - Theme provider pattern

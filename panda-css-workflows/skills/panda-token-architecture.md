@@ -652,8 +652,41 @@ After organizing tokens:
 2. **Implement components**: Use **panda-component-impl** skill for React components
 3. **Validate design system**: Ensure all components use tokens (strictTokens catches violations)
 
-## Reference Files from Best Practices Repo
+## Working Examples
 
-- Base tokens: `src/styles/tokens.ts`
-- Semantic tokens: `src/styles/semanticTokens.ts`
-- Config integration: `panda.config.ts`, `cetec-preset.ts`
+Reference these files in the `examples/` directory for production-tested token patterns:
+
+**Base Tokens (Primitives):**
+- `examples/primitives/primitives.color.tokens.ts` - Color scales (10-100) for all hues
+  ```typescript
+  lime: {
+    "10": { value: "#EFFFD6" },
+    "50": { value: "#82B536" },
+    "100": { value: "#28311B" }
+  }
+  ```
+- `examples/primitives/primitives.size.tokens.ts` - Unified spacing/sizing numeric scale
+- `examples/primitives/primitives.typography.tokens.ts` - Font families, sizes, weights, line heights
+- `examples/primitives/primitives.animation.tokens.ts` - Durations, easings, keyframes
+- `examples/primitives/primitives.utility.tokens.ts` - Borders, radii, opacity, aspect ratios
+
+**Semantic Tokens:**
+- `examples/semantics/semantics.color.tokens.ts` - Theme-aware color system
+  ```typescript
+  background: {
+    accent: {
+      blue: {
+        bolder: {
+          value: { base: "{colors.blue.70}", _dark: "{colors.blue.40}" }
+        }
+      }
+    }
+  }
+  ```
+- `examples/semantics/semantics.elevation.tokens.ts` - Shadow and depth tokens
+- `examples/semantics/semantics.opacity.tokens.ts` - Opacity semantic values
+- `examples/semantics/semantics.utility.tokens.ts` - Semantic utility tokens
+
+**Preset Integration:**
+- `examples/preset.ts` - Complete preset showing how to integrate primitives and semantics using `definePreset`, `defineTokens`, and `defineSemanticTokens`
+- `examples/textStyles.ts` - Typography presets combining font tokens

@@ -680,12 +680,30 @@ export type { IconProps } from './components/Icon'
 
 **Pattern**: Export both components and their prop types for consuming projects.
 
-## Reference Files from Best Practices Repo
+## Working Examples
 
-- Base component: `src/components/Box/Box.tsx`
-- splitProps utility: `src/utils/splitProps.ts`
-- Recipe component: `src/components/Button/Button.tsx`
-- Slot recipe component: `src/components/CheckBox/CheckBox.tsx`
-- Icon component: `src/components/Icon/Icon.tsx`
-- Polymorphic utility: `src/utils/forwardRefWithAs.ts`
-- Main exports: `src/index.ts`
+Reference these files in the `examples/` directory for production-tested patterns:
+
+**Utility Functions:**
+- `examples/utils/splitProps.ts` - CSS/HTML prop separation utility
+  ```typescript
+  // Separates Panda CSS props from HTML props
+  const [className, htmlProps] = splitProps(props);
+  // Uses splitCssProps, css(), and cx() to merge classNames
+  ```
+- `examples/utils/ThemeContext.tsx` - Theme provider with localStorage persistence
+  ```typescript
+  // Manages light/dark theme with system preference detection
+  // Persists user preference to localStorage
+  // Applies theme class to document root
+  ```
+
+**Token & Configuration Integration:**
+- `examples/preset.ts` - Shows how to integrate tokens with components via preset
+- `examples/conditions.ts` - Custom conditions for component states
+- `examples/textStyles.ts` - Typography presets for text components
+
+**For Complete Component Examples:**
+While this plugin focuses on architecture patterns, you can reference:
+- The skills themselves (this file, panda-recipe-patterns) contain inline component examples
+- Use the **panda-architect** agent for full component implementations

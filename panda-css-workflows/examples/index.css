@@ -1,0 +1,3 @@
+@layer reset, base, tokens, recipes, utilities;
+
+/* Font imports are now handled directly in the consuming app (main.tsx) */
