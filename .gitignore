@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.log
+
+# Plugin config (user-specific)
+.plugin-config/
+.claude/
+
+# Node modules if any plugin uses them
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.cache

@@ -1,0 +1,15 @@
+{
+  "name": "okshaun-plugins",
+  "owner": {
+    "name": "Shaun Fox"
+  },
+  "description": "Collection of Claude Code plugins for modern web development workflows",
+  "plugins": [
+    {
+      "name": "panda-css-workflows",
+      "source": "./panda-css-workflows",
+      "version": "1.0.0",
+      "description": "Expert Panda CSS workflows for React + Vite projects - setup, tokens, recipes, and components"
+    }
+  ]
+}

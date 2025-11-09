@@ -1,0 +1,43 @@
+{
+  "name": "panda-css-workflows",
+  "version": "1.0.0",
+  "description": "Expert Panda CSS workflows for React + Vite projects - setup, tokens, recipes, and components",
+  "author": "Cetec ERP Design System",
+  "skills": [
+    {
+      "name": "panda-setup-config",
+      "description": "Guide Panda CSS initial setup, configuration, preset architecture, and build integration for new projects",
+      "file": "skills/panda-setup-config.md"
+    },
+    {
+      "name": "panda-token-architecture",
+      "description": "Design token systems, semantic tokens, theme structures, and responsive design tokens following best practices",
+      "file": "skills/panda-token-architecture.md"
+    },
+    {
+      "name": "panda-recipe-patterns",
+      "description": "Create and organize recipes (regular + slot recipes), compound variants, and understand when to use recipes vs patterns vs inline CSS",
+      "file": "skills/panda-recipe-patterns.md"
+    },
+    {
+      "name": "panda-component-impl",
+      "description": "Build React components that properly use Panda CSS patterns, recipes, TypeScript integration, and accessibility best practices",
+      "file": "skills/panda-component-impl.md"
+    }
+  ],
+  "agents": [
+    {
+      "name": "panda-architect",
+      "description": "Specialized agent for complex Panda CSS architectural work including setting up new projects, refactoring to Panda CSS, and designing component libraries",
+      "file": "agents/panda-architect.json"
+    }
+  ],
+  "dependencies": {
+    "mcp": {
+      "required": false,
+      "servers": ["MCP_DOCKER"],
+      "tools": ["resolve-library-id", "get-library-docs"],
+      "note": "Optional: Enables fetching up-to-date Panda CSS official documentation"
+    }
+  }
+}
