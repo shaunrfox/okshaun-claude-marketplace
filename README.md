@@ -7,7 +7,7 @@ A curated collection of Claude Code plugins for modern web development workflows
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add shaunrfox/claude-marketplace
+/plugin marketplace add shaunrfox/okshaun-claude-marketplace
 ```
 
 Then install any plugin:

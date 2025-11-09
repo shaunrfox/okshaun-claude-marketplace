@@ -11,7 +11,7 @@ This is a **Claude Code plugin marketplace** that distributes plugins for modern
 ### Marketplace Structure
 
 ```
-claude-marketplace/               # Root marketplace directory
+okshaun-claude-marketplace/               # Root marketplace directory
 ├── .claude-plugin/
 │   └── marketplace.json         # Marketplace manifest (defines available plugins)
 ├── plugin-name/                 # Each plugin is a directory at root level
