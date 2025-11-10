@@ -1,6 +1,6 @@
 {
   "name": "panda-css-workflows",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Expert Panda CSS workflows for React + Vite projects - setup, tokens, recipes, and components",
   "author": "Cetec ERP Design System",
   "skills": [
@@ -23,6 +23,21 @@
       "name": "panda-component-impl",
       "description": "Build React components that properly use Panda CSS patterns, recipes, TypeScript integration, and accessibility best practices",
       "file": "skills/panda-component-impl.md"
+    },
+    {
+      "name": "panda-review-component",
+      "description": "Systematically assess an existing component against Panda CSS best practices, create prioritized recommendations, and implement approved changes",
+      "file": "skills/panda-review-component.md"
+    },
+    {
+      "name": "panda-create-stories",
+      "description": "Create Storybook stories that document and demonstrate Panda CSS components with variants, accessibility testing, and interactive controls",
+      "file": "skills/panda-create-stories.md"
+    },
+    {
+      "name": "panda-form-architecture",
+      "description": "Design and implement composable form component architectures using atomic design principles with Panda CSS (atomic → molecular → organism patterns)",
+      "file": "skills/panda-form-architecture.md"
     }
   ],
   "agents": [
