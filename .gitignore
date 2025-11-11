@@ -24,3 +24,6 @@ dist/
 build/
 *.cache
 .pair-programming-session.md
+.session-summary.md
+.project-structure.md
+.pair-programming-session.md
