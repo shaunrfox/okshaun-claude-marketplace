@@ -7,7 +7,7 @@ interface ThemeContextType {
   setTheme: (theme: Theme) => void;
 }
 
-const THEME_STORAGE_KEY = 'reynard-theme-preference';
+const THEME_STORAGE_KEY = 'design-system-theme-preference';
 
 function getInitialTheme(): Theme {
   // Check for stored preference

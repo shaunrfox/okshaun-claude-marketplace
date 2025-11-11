@@ -418,20 +418,11 @@ Reference these files in the `examples/` directory for production-tested pattern
 
 **Configuration:**
 - `examples/panda.config.ts` - Complete Panda config with preset integration
-- `examples/preset.ts` - Full preset architecture (reynardPreset) with tokens, semantic tokens, conditions, patterns
+- `examples/preset.ts` - Full preset architecture (myPreset) with tokens, semantic tokens, conditions, patterns
 
 **Token Architecture:**
-- `examples/primitives/` - Base token files organized by category
-  - `primitives.color.tokens.ts` - Color scales (10-100) with hex values
-  - `primitives.size.tokens.ts` - Unified sizing/spacing scale
-  - `primitives.typography.tokens.ts` - Font families, sizes, weights, line heights
-  - `primitives.animation.tokens.ts` - Durations, easings, keyframes
-  - `primitives.utility.tokens.ts` - Borders, radii, opacity, aspect ratios
-- `examples/semantics/` - Semantic token layer referencing primitives
-  - `semantics.color.tokens.ts` - Theme-aware color semantics
-  - `semantics.elevation.tokens.ts` - Shadow and elevation tokens
-  - `semantics.opacity.tokens.ts` - Opacity semantic values
-  - `semantics.utility.tokens.ts` - Semantic utilities
+- `examples/tokens.ts` - Base token files organized by category
+- `examples/semanticTokens.ts/` - Semantic token layer referencing primitives
 
 **Additional Patterns:**
 - `examples/textStyles.ts` - Typography preset definitions

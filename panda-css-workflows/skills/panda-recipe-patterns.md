@@ -53,119 +53,226 @@ Reusable card layout? → Recipe
 Create: `src/recipes/button.ts`
 
 ```typescript
-import { defineRecipe } from '@pandacss/dev'
+import { defineRecipe } from '@pandacss/dev';
+
+const buttonBase = {
+  position: 'relative',
+  appearance: 'none',
+  minWidth: '0',
+  transitionDuration: 'fast',
+  transitionProperty: 'background, border-color, color, box-shadow',
+  transitionTimingFunction: 'default',
+  userSelect: 'none',
+  verticalAlign: 'middle',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '4',
+  fontFamily: 'body',
+  fontSize: '16',
+  fontWeight: 'medium',
+  lineHeight: 'default',
+  borderWidth: '1',
+  borderStyle: 'solid',
+  borderColor: 'transparent',
+  borderRadius: '4',
+  outlineWidth: '2',
+  outlineStyle: 'solid',
+  outlineColor: 'transparent',
+  outlineOffset: '1',
+  textDecoration: 'none',
+  whiteSpace: 'nowrap',
+  cursor: 'pointer',
+  _disabled: {
+    opacity: 0.4,
+    cursor: 'not-allowed',
+  },
+  _focusVisible: {
+    outlineColor: { base: 'slate.80', _dark: 'slate.5' },
+  },
+  '& svg': {
+    fill: 'current',
+  },
+};
+
+const buttonVariants = {
+  variant: {
+    primary: {
+      bg: { base: 'slate.90', _dark: 'slate.5' },
+      color: { base: 'slate.0', _dark: 'slate.90' },
+      _hover: {
+        bg: { base: 'slate.70', _dark: 'slate.10' },
+      },
+      _active: {
+        bg: { base: 'slate.100', _dark: 'slate.20' },
+      },
+      _disabled: {
+        _hover: {
+          bg: { base: 'slate.90', _dark: 'slate.5' },
+        },
+      },
+      _selected: {
+        bg: { base: 'slate.5', _dark: 'slate.90' },
+        color: { base: 'slate.90', _dark: 'slate.0' },
+      },
+    },
+    standard: {
+      bg: { base: 'slate.5', _dark: 'slate.70' },
+      color: { base: 'slate.90', _dark: 'slate.0' },
+      _hover: {
+        bg: { base: 'slate.10', _dark: 'slate.60' },
+      },
+      _active: {
+        bg: { base: 'slate.20', _dark: 'slate.80' },
+      },
+      _disabled: {
+        _hover: {
+          bg: { base: 'slate.5', _dark: 'slate.70' },
+        },
+      },
+      _selected: {
+        bg: { base: 'slate.90', _dark: 'slate.5' },
+        color: { base: 'slate.0', _dark: 'slate.90' },
+      },
+    },
+    hollow: {
+      bg: 'transparent',
+      borderColor: { base: 'slate.30', _dark: 'slate.60' },
+      color: { base: 'slate.90', _dark: 'slate.0' },
+      _hover: {
+        bg: { base: 'slate.10', _dark: 'slate.60' },
+        borderColor: { base: 'slate.10', _dark: 'slate.60' },
+      },
+      _active: {
+        bg: { base: 'slate.20', _dark: 'slate.80' },
+        borderColor: { base: 'slate.20', _dark: 'slate.80' },
+      },
+      _disabled: {
+        _hover: {
+          bg: 'transparent',
+        },
+      },
+      _selected: {
+        bg: { base: 'slate.90', _dark: 'slate.5' },
+        color: { base: 'slate.0', _dark: 'slate.90' },
+        borderColor: 'transparent',
+      },
+    },
+    ghost: {
+      bg: 'transparent',
+      color: { base: 'slate.90', _dark: 'slate.0' },
+      _hover: {
+        bg: { base: 'slate.10', _dark: 'slate.60' },
+      },
+      _active: {
+        bg: { base: 'slate.20', _dark: 'slate.70' },
+      },
+      _disabled: {
+        _hover: {
+          bg: 'transparent',
+        },
+      },
+      _selected: {
+        bg: { base: 'slate.90', _dark: 'slate.5' },
+        color: { base: 'slate.0', _dark: 'slate.90' },
+      },
+    },
+    cta: {
+      bg: { base: 'gold.20', _dark: 'gold.30' },
+      color: 'slate.90',
+      _hover: {
+        bg: { base: 'gold.10', _dark: 'gold.20' },
+      },
+      _active: {
+        bg: { base: 'gold.30', _dark: 'gold.40' },
+      },
+      _disabled: {
+        _hover: {
+          bg: { base: 'gold.20', _dark: 'gold.30' },
+        },
+      },
+    },
+    danger: {
+      bg: 'red.50',
+      color: 'slate.0',
+      _hover: {
+        bg: 'red.40',
+      },
+      _active: {
+        bg: 'red.60',
+      },
+      _disabled: {
+        _hover: {
+          bg: 'red.50',
+        },
+      },
+    },
+  },
+};
 
 export const buttonRecipe = defineRecipe({
   className: 'button',
-  description: 'Button component styles',
-
-  // Optional: Auto-apply recipe to JSX components
   jsx: ['Button'],
-
-  // Base styles applied to all variants
-  base: {
-    appearance: 'none',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    userSelect: 'none',
-    position: 'relative',
-    whiteSpace: 'nowrap',
-    verticalAlign: 'middle',
-    outline: 'none',
-    cursor: 'pointer',
-
-    // Transitions
-    transitionProperty: 'background, border-color, color, box-shadow',
-    transitionDuration: 'fast',
-    transitionTimingFunction: 'default',
-
-    // States
-    _disabled: {
-      opacity: 0.4,
-      cursor: 'not-allowed',
-      pointerEvents: 'none'
-    },
-    _focusVisible: {
-      outlineWidth: '2',
-      outlineOffset: '1',
-      outlineColor: { base: 'slate.90', _dark: 'slate.5' }
-    }
-  },
-
-  // Variants
+  base: buttonBase,
   variants: {
-    variant: {
-      primary: {
-        bg: { base: 'blue.50', _dark: 'blue.40' },
-        color: 'white',
-        borderWidth: '1',
-        borderColor: { base: 'blue.60', _dark: 'blue.50' },
-        _hover: {
-          bg: { base: 'blue.60', _dark: 'blue.50' }
-        },
-        _active: {
-          bg: { base: 'blue.70', _dark: 'blue.60' }
-        }
-      },
-      secondary: {
-        bg: { base: 'slate.10', _dark: 'slate.80' },
-        color: { base: 'slate.90', _dark: 'slate.10' },
-        borderWidth: '1',
-        borderColor: { base: 'slate.20', _dark: 'slate.70' },
-        _hover: {
-          bg: { base: 'slate.20', _dark: 'slate.70' }
-        }
-      },
-      outline: {
-        bg: 'transparent',
-        color: { base: 'blue.50', _dark: 'blue.40' },
-        borderWidth: '1',
-        borderColor: { base: 'blue.50', _dark: 'blue.40' },
-        _hover: {
-          bg: { base: 'blue.5', _dark: 'blue.90' }
-        }
-      },
-      ghost: {
-        bg: 'transparent',
-        color: { base: 'slate.90', _dark: 'slate.10' },
-        _hover: {
-          bg: { base: 'slate.10', _dark: 'slate.80' }
-        }
-      }
-    },
-
+    ...buttonVariants,
     size: {
-      small: {
-        px: '12',
-        py: '6',
-        fontSize: 'sm',
-        borderRadius: '4',
-        gap: '6'
-      },
       medium: {
-        px: '16',
-        py: '8',
-        fontSize: 'md',
-        borderRadius: '4',
-        gap: '8'
+        fontSize: '16',
+        py: '3',
+        px: '10',
       },
       large: {
-        px: '20',
-        py: '12',
-        fontSize: 'lg',
-        borderRadius: '6',
-        gap: '12'
-      }
-    }
+        fontSize: '16',
+        py: '7',
+        px: '12',
+      },
+      small: {
+        fontSize: '14',
+        py: '0',
+        px: '8',
+        '& svg': {
+          mt: '-1',
+          mb: '-1',
+        },
+      },
+    },
   },
-
-  // Default variant values
   defaultVariants: {
-    variant: 'primary',
-    size: 'medium'
-  }
-})
+    variant: 'standard',
+    size: 'medium',
+  },
+});
+
+export const iconButtonRecipe = defineRecipe({
+  className: 'icon-button',
+  jsx: ['IconButton'],
+  base: buttonBase,
+  variants: {
+    ...buttonVariants,
+    size: {
+      medium: {
+        fontSize: '16',
+        p: '3',
+      },
+      large: {
+        fontSize: '16',
+        p: '7',
+      },
+      small: {
+        fontSize: '14',
+        p: '0',
+        '& svg': {
+          mt: '-1',
+          mb: '-1',
+        },
+      },
+    },
+  },
+  defaultVariants: {
+    variant: 'standard',
+    size: 'medium',
+  },
+});
 ```
 
 ### Extract Base Styles for DRY Code

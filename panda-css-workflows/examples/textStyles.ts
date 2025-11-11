@@ -1,28 +1,28 @@
 import { defineTextStyles, defineStyles } from "@pandacss/dev";
-import { fontVariants } from "./primitives";
-import { color as semanticColors } from "./semantics/semantics.color.tokens";
+import * as tokens from "./tokens";
+import { colors as semanticColors } from "./semanticTokens";
 
 const baseHeadingStyles = defineStyles({
   value: {
     fontFamily: "heading",
     fontWeight: "black",
-    color: semanticColors.text,
+    color: semanticColors.utility.headingColor,
   },
 });
 
 const baseBodyTextStyles = defineStyles({
   value: {
     fontFamily: "body",
-    fontVariationSettings: fontVariants.body,
-    color: semanticColors.text.subtle,
+    fontVariationSettings: tokens.fontVariants.body,
+    color: semanticColors.utility.textColor,
   },
 });
 
 const baseMonoStyles = defineStyles({
   value: {
     fontFamily: "mono",
-    fontVariationSettings: fontVariants.mono,
-    color: semanticColors.text.subtle,
+    fontVariationSettings: tokens.fontVariants.mono,
+    color: semanticColors.utility.textColor,
   },
 });
 
