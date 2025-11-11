@@ -129,6 +129,64 @@ Use the Skill tool with: "panda-css-workflows:panda-component-impl"
 **Example**:
 > "How do I build a React component that uses a Panda CSS recipe?"
 
+#### Skill: panda-create-stories
+
+**When to use**: Creating Storybook documentation for Panda CSS components
+
+```
+Use the Skill tool with: "panda-css-workflows:panda-create-stories"
+```
+
+**What it covers**:
+- Creating Storybook stories for component variants
+- Documenting component props and usage patterns
+- Accessibility testing integration in Storybook
+- Interactive controls for variant exploration
+- Responsive behavior demonstrations
+- Theme switching showcases
+
+**Example**:
+> "Create Storybook stories for my Button component with all variants"
+
+#### Skill: panda-form-architecture
+
+**When to use**: Designing composable form component systems
+
+```
+Use the Skill tool with: "panda-css-workflows:panda-form-architecture"
+```
+
+**What it covers**:
+- Atomic design principles for form components
+- Form field wrappers with consistent accessibility
+- Error handling and validation patterns
+- Form component hierarchy and composition strategies
+- Input, Select, Checkbox, Radio component patterns
+- Design system form component guidelines
+
+**Example**:
+> "Help me design a composable form component architecture"
+
+#### Skill: panda-review-component
+
+**When to use**: Auditing existing components for Panda CSS best practices
+
+```
+Use the Skill tool with: "panda-css-workflows:panda-review-component"
+```
+
+**What it covers**:
+- Systematic component assessment against best practices
+- Token usage review (strictTokens compliance)
+- Recipe vs pattern vs inline CSS evaluation
+- Accessibility compliance checking
+- Prioritized improvement recommendations
+- Technical debt identification
+- Refactoring guidance with approval workflow
+
+**Example**:
+> "Review my component against Panda CSS best practices"
+
 ### Using the Agent
 
 The **panda-architect** agent handles complex, multi-step architectural work autonomously.

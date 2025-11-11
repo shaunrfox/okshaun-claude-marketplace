@@ -28,8 +28,8 @@ Expert Panda CSS workflows for React + Vite projects, covering:
 - Recipe patterns and component styling
 - React component implementation
 
-**Version:** 1.0.0
-**Skills:** 4
+**Version:** 1.1.2
+**Skills:** 7
 **Agents:** 1
 
 [Learn more](./panda-css-workflows/README.md)

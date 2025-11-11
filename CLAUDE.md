@@ -34,8 +34,8 @@ okshaun-claude-marketplace/               # Root marketplace directory
 ### Marketplace Distribution
 
 This marketplace is distributed via GitHub:
-- Repository: `shaunrfox/okshaun-plugins`
-- Users add: `/plugin marketplace add shaunrfox/okshaun-plugins`
+- Repository: `shaunrfox/okshaun-claude-marketplace`
+- Users add: `/plugin marketplace add shaunrfox/okshaun-claude-marketplace`
 - Users install plugins: `/plugin install plugin-name@okshaun-plugins`
 
 ## Release Workflow
