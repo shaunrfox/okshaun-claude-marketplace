@@ -657,7 +657,8 @@ After organizing tokens:
 Reference these files in the `examples/` directory for production-tested token patterns:
 
 **Base Tokens (Primitives):**
-- `examples/primitives/primitives.color.tokens.ts` - Color scales (10-100) for all hues
+- `examples/tokens.ts`
+- - Color scales (10-100) for all hues
   ```typescript
   lime: {
     "10": { value: "#EFFFD6" },
@@ -665,13 +666,14 @@ Reference these files in the `examples/` directory for production-tested token p
     "100": { value: "#28311B" }
   }
   ```
-- `examples/primitives/primitives.size.tokens.ts` - Unified spacing/sizing numeric scale
-- `examples/primitives/primitives.typography.tokens.ts` - Font families, sizes, weights, line heights
-- `examples/primitives/primitives.animation.tokens.ts` - Durations, easings, keyframes
-- `examples/primitives/primitives.utility.tokens.ts` - Borders, radii, opacity, aspect ratios
+- - Unified spacing/sizing numeric scale
+- - Font families, sizes, weights, line heights
+- - Durations, easings, keyframes
+- - Borders, radii, opacity, aspect ratios
 
 **Semantic Tokens:**
-- `examples/semantics/semantics.color.tokens.ts` - Theme-aware color system
+- `examples/semanticTokens.ts`
+- - Theme-aware color system
   ```typescript
   background: {
     accent: {
@@ -683,9 +685,8 @@ Reference these files in the `examples/` directory for production-tested token p
     }
   }
   ```
-- `examples/semantics/semantics.elevation.tokens.ts` - Shadow and depth tokens
-- `examples/semantics/semantics.opacity.tokens.ts` - Opacity semantic values
-- `examples/semantics/semantics.utility.tokens.ts` - Semantic utility tokens
+- - Shadow and depth tokens
+- - Semantic utility tokens
 
 **Preset Integration:**
 - `examples/preset.ts` - Complete preset showing how to integrate primitives and semantics using `definePreset`, `defineTokens`, and `defineSemanticTokens`

@@ -4,12 +4,12 @@ import {
   defineSemanticTokens,
 } from "@pandacss/dev";
 import pandaBasePreset from "@pandacss/preset-base";
-import * as primitives from "./primitives";
-import * as semantics from "./semantics";
+import * as tokens from "./tokens";
+import * as semantics from "./semanticTokens";
 import { conditions } from "./conditions";
 import { textStyles } from "./textStyles";
 import { globalCss } from "./globalStyle";
-import * as uiRecipes from "@reynard/ui/src/recipes";
+import * as uiRecipes from "./src/recipes";
 
 // https://panda-css.com/docs/concepts/extend#removing-something-from-the-base-presets
 // omit default patterns here
@@ -21,34 +21,33 @@ const pandaBasePresetGlobalCss = pandaBasePreset.globalCss;
 // using pandas methods to define type-safe tokens
 const theme = {
   tokens: defineTokens({
-    aspectRatios: primitives.aspectRatios,
-    borders: primitives.borders,
-    easings: primitives.easings,
-    durations: primitives.durations,
-    letterSpacings: primitives.letterSpacings,
-    lineHeights: primitives.lineHeights,
-    blurs: primitives.blurs,
-    animations: primitives.animations,
-    colors: primitives.primitiveColors,
-    fonts: primitives.fonts,
-    fontSizes: primitives.fontSizes,
-    fontWeights: primitives.fontWeights,
-    sizes: primitives.sizes,
-    numericSizes: primitives.numericSizes,
-    spacing: primitives.sizes,
-    radii: primitives.radii,
-    keyframes: primitives.keyframes,
-    containerSizes: primitives.containerSizes,
-    breakpoints: primitives.breakpoints,
-    opacity: primitives.opacityTokens,
+    aspectRatios: tokens.aspectRatios,
+    borders: tokens.borders,
+    easings: tokens.easings,
+    durations: tokens.durations,
+    letterSpacings: tokens.letterSpacings,
+    lineHeights: tokens.lineHeights,
+    blurs: tokens.blurs,
+    animations: tokens.animations,
+    colors: tokens.colors,
+    fonts: tokens.fonts,
+    fontSizes: tokens.fontSizes,
+    fontWeights: tokens.fontWeights,
+    sizes: tokens.sizes,
+    numericSizes: tokens.numericSizes,
+    spacing: tokens.sizes,
+    radii: tokens.radii,
+    keyframes: tokens.keyframes,
+    containerSizes: tokens.containerSizes,
+    breakpoints: tokens.breakpoints,
   }),
   semanticTokens: defineSemanticTokens({
     ...semantics,
   }),
 };
 
-export const reynardPreset = definePreset({
-  name: "reynard",
+export const myPreset = definePreset({
+  name: "my-design-system-preset",
   theme: {
     extend: {
       tokens: {
@@ -75,28 +74,28 @@ export const reynardPreset = definePreset({
         ...theme.semanticTokens,
       },
       textStyles,
-      // recipes: {
-      //   ...uiRecipes,
-      // },
+      recipes: {
+        ...uiRecipes,
+      },
     },
   },
   patterns: {
-    // icon: {
-    //   properties: {
-    //     size: {
-    //       type: "enum",
-    //       value: Object.keys(theme.tokens.sizes),
-    //     },
-    //   },
-    //   transform(props) {
-    //     const { size, ...rest } = props;
-    //     return {
-    //       width: size,
-    //       height: size,
-    //       ...rest,
-    //     };
-    //   },
-    // },
+    icon: {
+      properties: {
+        size: {
+          type: "enum",
+          value: Object.keys(theme.tokens.sizes),
+        },
+      },
+      transform(props) {
+        const { size, ...rest } = props;
+        return {
+          width: size,
+          height: size,
+          ...rest,
+        };
+      },
+    },
     extend: {
       ...pandaBasePresetPatterns,
       container: {

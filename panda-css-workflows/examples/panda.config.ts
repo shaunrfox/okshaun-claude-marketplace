@@ -1,5 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-import { reynardPreset } from "./src/preset";
+import { myPreset } from "./src/preset";
 
 export default defineConfig({
   eject: true,
@@ -18,8 +18,8 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
-  // Use our custom Reynard preset
-  presets: ["@pandacss/dev/presets", reynardPreset],
+  // Use our custom preset
+  presets: ["@pandacss/dev/presets", myPreset],
 
   // The output directory for your css system
   outdir: "styled-system",

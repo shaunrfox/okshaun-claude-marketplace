@@ -88,9 +88,9 @@ Use **semantic versioning** (major.minor.patch) for both plugins and marketplace
 **For plugin updates:**
 1. Update version in `plugin-name/.claude-plugin/plugin.json`
 2. Update version in root `.claude-plugin/marketplace.json` entry
-3. Commit: `git commit -m "Update plugin-name to v1.1.0"`
-4. Tag: `git tag v1.1.0`
-5. Push: `git push origin main && git push origin v1.1.0`
+3. Commit: `git commit -m "Update plugin-name to v1.1.1"`
+4. Tag: `git tag v1.1.1`
+5. Push: `git push origin main && git push origin v1.1.1`
 
 **For new plugin additions:**
 1. Add plugin directory and manifest

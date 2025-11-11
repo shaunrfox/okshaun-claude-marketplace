@@ -1,8 +1,8 @@
 {
-  "name": "@reynard/theme",
+  "name": "my-design-system",
   "version": "1.0.0",
   "type": "module",
-  "description": "Reynard design system with Panda CSS",
+  "description": "Design system with Panda CSS",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "scripts": {
