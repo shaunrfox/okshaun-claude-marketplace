@@ -181,14 +181,17 @@ Use the Task tool with:
 - Validates setup and configuration
 - Tests in light and dark themes
 
-### MCP Integration (Optional)
+### MCP Servers
 
-This plugin can use MCP tools to fetch up-to-date official Panda CSS documentation:
+This plugin can use the Context7 MCP tools to fetch up-to-date official documentation for things like Panda CSS. Skills and agent will automatically use MCP tools when needed and it only uses tokens when invoked.
 
-1. Ensure MCP Docker server is available
-2. Skills and agent will automatically use MCP tools when needed:
-   - `resolve-library-id` to find Panda CSS library
-   - `get-library-docs` to fetch relevant documentation
+- Docs are fetched on-demand and typically use 1-5k tokens per fetch
+- Toggle with `@context7 off/on` if you want to disable it temporarily
+
+#### Tools
+
+ - `resolve-library-id` to find Panda CSS library
+ - `get-library-docs` to fetch relevant documentation
 
 **No manual configuration required** - the plugin handles MCP integration automatically when available.
 
@@ -273,7 +276,7 @@ panda-css-workflows/
 │   ├── panda-recipe-patterns.md    # Recipe development
 │   └── panda-component-impl.md     # Component implementation
 └── agents/
-    └── panda-architect.json        # Autonomous agent config
+    └── panda-architect.md        # Autonomous agent config
 ```
 
 ## Reference Implementation

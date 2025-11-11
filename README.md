@@ -78,7 +78,7 @@ plugin-name/
   commands/              # Optional: Slash commands
     command-name.md
   agents/                # Optional: Agent configurations
-    agent-name.json
+    agent-name.md
   hooks/                 # Optional: Hook scripts
     hook-name.sh
   mcp/                   # Optional: MCP server configs

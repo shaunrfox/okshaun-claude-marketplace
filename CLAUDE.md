@@ -121,7 +121,7 @@ Before pushing, test via development marketplace:
 Plugins can contain:
 
 - **Skills** (`skills/*.md`) - Manual invocation for focused tasks, written in markdown with frontmatter
-- **Agents** (`agents/*.json`) - Autonomous sub-agents for complex multi-step work
+- **Agents** (`agents/*.md`) - Autonomous sub-agents for complex multi-step work
 - **Commands** (`commands/*.md`) - Slash commands for quick actions
 - **Hooks** (`hooks/*.sh`) - Event-driven scripts (require executable permissions)
 - **MCP Servers** (`mcp/*/`) - Model Context Protocol server integrations
