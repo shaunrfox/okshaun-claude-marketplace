@@ -9,6 +9,9 @@ A comprehensive Claude Code plugin providing expert guidance for building React 
 - **panda-token-architecture** - Token system design, semantic tokens, and theme structures
 - **panda-recipe-patterns** - Recipe development (regular + slot recipes) and organization
 - **panda-component-impl** - React component implementation with Panda CSS
+- **panda-create-stories** - Create Storybook documentation for Panda CSS components
+- **panda-form-architecture** - Design and implement composable form component architectures
+- **panda-review-component** - Review existing component for Panda CSS best practices compliance
 
 ### Agent (Autonomous)
 - **panda-architect** - Specialized agent for complex multi-step architectural work
@@ -50,6 +53,26 @@ A comprehensive Claude Code plugin providing expert guidance for building React 
    ```
 
 ## Usage
+
+### Slash Commands (Quick Access)
+
+The fastest way to invoke skills is with slash commands. Type these directly in Claude Code:
+
+| Command | Skill | What it does |
+|---------|-------|--------------|
+| `/panda-setup` | panda-setup-config | Set up Panda CSS configuration and build integration |
+| `/panda-tokens` | panda-token-architecture | Design token architecture and theme structures |
+| `/panda-recipes` | panda-recipe-patterns | Create component recipes with variants |
+| `/panda-component` | panda-component-impl | Build React components with Panda CSS |
+| `/panda-stories` | panda-create-stories | Create Storybook stories for components |
+| `/panda-forms` | panda-form-architecture | Design composable form component systems |
+| `/panda-review` | panda-review-component | Review components for best practices |
+
+**Example:**
+```
+User: /panda-setup
+→ Claude invokes the panda-setup-config skill
+```
 
 ### Using Skills
 

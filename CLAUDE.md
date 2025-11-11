@@ -128,12 +128,13 @@ Plugins can contain:
 
 ## Current Plugins
 
-### panda-css-workflows (v1.0.0)
+### panda-css-workflows (v1.2.0)
 
 Expert Panda CSS workflows for React + Vite projects.
 
 **Components:**
-- 4 skills: setup-config, token-architecture, recipe-patterns, component-impl
+- 7 skills: setup-config, token-architecture, recipe-patterns, component-impl, create-stories, form-architecture, review-component
+- 7 slash commands: /panda-setup, /panda-tokens, /panda-recipes, /panda-component, /panda-stories, /panda-forms, /panda-review
 - 1 agent: panda-architect (for complex architectural work)
 - Optional MCP integration for live Panda CSS documentation
 

@@ -27,9 +27,13 @@ Expert Panda CSS workflows for React + Vite projects, covering:
 - Token architecture and design systems
 - Recipe patterns and component styling
 - React component implementation
+- Storybook story creation
+- Form architecture patterns
+- Component best practices review
 
-**Version:** 1.1.2
+**Version:** 1.2.0
 **Skills:** 7
+**Slash Commands:** 7
 **Agents:** 1
 
 [Learn more](./panda-css-workflows/README.md)
