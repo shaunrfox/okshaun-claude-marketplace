@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "instructions/panda-setup-config.md",
+    "instructions/panda-token-architecture.md",
+    "instructions/panda-recipe-patterns.md",
+    "instructions/panda-component-impl.md",
+    "instructions/panda-create-stories.md",
+    "instructions/panda-form-architecture.md",
+    "instructions/panda-review-component.md"
+  ]
+}
