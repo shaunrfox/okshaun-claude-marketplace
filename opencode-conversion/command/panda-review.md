@@ -1,14 +1,21 @@
 ---
-description: Review existing components for Panda CSS best practices compliance and refactoring
+description: Review a single component for Panda CSS best practices compliance and refactoring
 ---
 
-Follow the systematic Panda CSS component review process to:
-- Assess components against best practices
-- Review token usage (strictTokens compliance)
-- Evaluate recipe vs pattern vs inline CSS usage
-- Check accessibility compliance
-- Generate prioritized improvement recommendations
-- Identify technical debt
-- Provide refactoring guidance with approval workflow
+Review ONE component at a time using the systematic Panda CSS component review process.
+
+**Usage:** `/panda-review <component-path>`
+
+**Process:**
+1. Identify the specific component file to review
+2. Assess the component against best practices:
+   - Token usage (strictTokens compliance)
+   - Recipe vs pattern vs inline CSS usage
+   - Accessibility compliance
+   - Technical debt
+3. Generate prioritized improvement recommendations
+4. Provide refactoring guidance with approval workflow
+
+**Important:** This command reviews a SINGLE component only. If you need to review multiple components, run this command separately for each one.
 
 Refer to the panda-review-component instructions for the complete assessment checklist.
